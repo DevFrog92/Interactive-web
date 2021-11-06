@@ -1,0 +1,15 @@
+body {
+  background-color: gold;
+}
+
+h1 {
+  width:700px;
+  margin: 0 auto;
+  background-color: skyblue;
+  transition: .5s;
+}
+
+p {
+  width:700px;
+  margin: 0 auto;
+}
