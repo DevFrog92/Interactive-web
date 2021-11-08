@@ -42,8 +42,16 @@ dl - 제목과 설명의 쌍으로 이루어진 형태의 목록
   </dl>
 ```
 
-### 인용 - blockquote
+### 인용 - blockquote, q
+q는 텍스트 중간에 사용한다.
 ### 줄바꾼 - br, wbr
 `wbr` 은 줄바꿈 위치를 명시해 해준다.
 ### 링크 - a
 hash link
+history api
+### 강조 - Strong,em
+Strong은 의미가 있는 강조에 적용한다.
+### 출처 - cite
+### span
+div의 인라인 버전이다.
+특별한 의미 없이 디자인이나 값 지정 등의 목적으로 텍스트를 감싸는 용도이다.
