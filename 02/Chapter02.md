@@ -20,3 +20,30 @@ HTML은 웹의 기본, 골격, 마크업 언어일 뿐 아니라, 애플리케�
 ### `<body>`
 
 실제 콘텐츠가 표시되는 영역이다.
+
+
+## HTML Tag
+## 글, 텍스트, 링크
+### 제목(heading) - h1 ~ h6
+숫자가 작을 수록 큰 제목을 나타낸다.
+h1는 검색에 아주 중요한 영향이다.
+제목의 레벨에 따라 내용의 그룹을 결정한다.
+
+### 문장과 문단(paragraph) - P
+
+### 목록 - ul,ol,dl
+ul - unordered list
+ol - ordered list
+dl - 제목과 설명의 쌍으로 이루어진 형태의 목록
+```html
+  <dl>
+    <dt>제목</dt>
+    <dd>설명</dd>
+  </dl>
+```
+
+### 인용 - blockquote
+### 줄바꾼 - br, wbr
+`wbr` 은 줄바꿈 위치를 명시해 해준다.
+### 링크 - a
+hash link
