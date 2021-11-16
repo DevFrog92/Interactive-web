@@ -63,3 +63,28 @@ div의 인라인 버전이다.
 
 
 ### figure
+콘텐츠와 관련된 이미지, 비디오, 오디오 등을 감싸는 용도의 태그
+본문과 관련된 콘텐츠이다.
+
+### picture
+img 대신 사용할 수 있는 태그. 내부의 이미지들을 순서대로 하나씩 로드를 시도, 브라우저에서 읽는게 가능한 포맷을 만나면 그 이미지를 표시하고 아래 파일들은 무시한다.
+```HTML
+<picture>
+  <source src="./images/pizza.jpg">
+  <source src="./images/pizza.svg">
+  <img src="./images/pizza.png">
+</picture>
+```
+
+### video
+브라우저 정책상 단독 autoplay를 사용할 수 없다. muted가 필요.
+muted와 같은 속성이름은 속성값과 같기 때문에 값을 생략할 수 있다.
+
+```HTML
+<video>
+  <source src="./images/pizza.mp4">
+  <source src="./images/pizza.mov">
+</video>
+```
+
+### audio
