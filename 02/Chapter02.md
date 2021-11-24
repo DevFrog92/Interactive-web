@@ -88,3 +88,9 @@ muted와 같은 속성이름은 속성값과 같기 때문에 값을 생략할 �
 ```
 
 ### audio
+
+### table
+caption은 table의 제목과 같다.
+속성 `colspan`은 열을 합칠 수 있고, `rowspan`은 행을 합칠 수 있다.
+
+### form
