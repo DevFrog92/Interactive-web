@@ -1,0 +1,33 @@
+/* 요소 선택자(selector): 태그 이름으로 선택하기 */
+body {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+/* 마진 병합 현상 */
+/* 어디에 있던 간에 위, 아래, 좌, 우로 정해진 만큼의 여백이 있었으면 좋겠어서 */
+
+p {
+  margin: 30px;
+  padding: 20px;
+  line-height: 1.6;
+  background: coral;
+}
+
+/* id selector: 딱 한번만 사용해야 한다. */
+#site-name {
+  border: 3px solid black;
+}
+
+/* class selector */
+
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 2px dashed gray;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
