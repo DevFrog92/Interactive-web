@@ -4,9 +4,29 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./default.css">
   <title>Flex</title>
+  <style>
+    .flex-container {
+      display: flex;
+      /* display: inline-flex; */
+      /* flex-direction: column; */
+      /* flex-direction: column-reverse; */
+      /* flex-direction: row-reverse; */
+
+      /* wrap 줄넘김 처리 설정 아이템의 총 합보다 컨테이너가 작아졌을때 어떻게 할 것인가?*/
+      flex-wrap:wrap;
+
+      /* flex-direction + flex-wrap = flex-flow*/
+      flex-flow: row wrap;
+    }
+  </style>
 </head>
 <body>
-
+  <div class="flex-container">
+    <div class="flex-item">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</div>
+    <div class="flex-item">BBBBB</div>
+    <div class="flex-item">CCCCCCCCCCCCCCCCCCCCCCCCCC</div>
+  </div>
 </body>
 </html>
