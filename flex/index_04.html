@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./default.css">
+  <title>Flex 04</title>
+  <style>
+    .flex-container {
+      display: flex;
+      height: 100vh;
+      align-items: center;
+    }
+
+    .flex-item:nth-child(1) {
+      /* align-self: stretch; */
+      /* 시각적으로만 나열하는 것이므로, 구조적으로 변경이 되는 것은 아니다. */
+      transform: scale(1.5);
+      z-index: 10;
+    }
+
+    .flex-item:nth-child(2) {
+      /* align-self: stretch; */
+      z-index: 15;
+      transform: scale(2);
+    }
+
+    .flex-item:nth-child(3) {
+      /* align-self: stretch; */
+      transform: scale(2.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="flex-item">AAAAAAAAA</div>
+    <div class="flex-item">BBBB</div>
+    <div class="flex-item">CCCCC</div>
+  </div>
+</body>
+</html>

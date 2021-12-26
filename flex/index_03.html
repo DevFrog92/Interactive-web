@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./default.css">
+  <title>Flex 03</title>
+  <style>
+    .flex-container {
+      display: flex;
+      /* width: 600px; */
+      /* margin: 0 auto; */
+    }
+
+    /* .flex-item {
+      width: 150px;
+    }
+
+    .flex-item:last-child {
+      margin-left: auto;
+    } */
+
+  /* .flex-item {
+  }
+
+  .flex-item:nth-child(1) {
+    width: 150px;
+    flex: 0 0 auto;
+  }
+
+  .flex-item:nth-child(2) {
+    flex: 1;
+  }
+
+  .flex-item:nth-child(3) {
+    width: 200px;
+    flex: 0 0 auto;
+  } */
+
+  .page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .content {
+    flex: 1 auto;
+    padding: 1.5rem;
+  }
+  </style>
+</head>
+<body>
+  <!-- <div class="flex-container">
+    <div class="flex-item">A</div>
+    <div class="flex-item">B</div>
+    <div class="flex-item">C</div>
+  </div> -->
+  <!-- <div class="flex-container">
+    <div class="flex-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, non?</div>
+    <div class="flex-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, non?</div>
+    <div class="flex-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, non?</div>
+  </div> -->
+
+  <div class="page">
+    <header class="header flex-item">header</header>
+    <section class="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque accusantium assumenda ab quidem cum autem ullam in. Recusandae quae libero, quos asperiores assumenda vitae iure alias molestias, nulla aperiam, impedit ipsa! Sed alias maiores quas dolore sequi, beatae magni sapiente nam, provident, quis quo minus nesciunt sit blanditiis magnam? Corrupti.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque accusantium assumenda ab quidem cum autem ullam in. Recusandae quae libero, quos asperiores assumenda vitae iure alias molestias, nulla aperiam, impedit ipsa! Sed alias maiores quas dolore sequi, beatae magni sapiente nam, provident, quis quo minus nesciunt sit blanditiis magnam? Corrupti.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque accusantium assumenda ab quidem cum autem ullam in. Recusandae quae libero, quos asperiores assumenda vitae iure alias molestias, nulla aperiam, impedit ipsa! Sed alias maiores quas dolore sequi, beatae magni sapiente nam, provident, quis quo minus nesciunt sit blanditiis magnam? Corrupti.
+    </section>
+    <footer class="footer flex-item">footer</footer>
+  </div>
+
+</body>
+</html>
