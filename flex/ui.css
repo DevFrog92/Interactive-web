@@ -62,3 +62,22 @@
   content: "";
   margin-right: 0.5em;
 }
+
+/* messge */
+.user-item {
+  display: flex;
+  margin-bottom: 1.5em;
+}
+
+.user-photo {
+  background-color: gold;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  border: 2px solid #333;
+  border-radius: 50%;
+  flex-shrink: 0;
+  height: 50px;
+  margin-right: 0.5em;
+  width: 50px;
+}
