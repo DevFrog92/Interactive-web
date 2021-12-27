@@ -1,0 +1,30 @@
+.menu {
+  display: flex;
+}
+
+.menu-item {
+  background-color: gold;
+  transition: 0.5s;
+  width: 25%;
+}
+
+.menu-item:hover {
+  background-color: crimson;
+  width: 35%;
+}
+
+.menu-link {
+  color: #555;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  /* 현재 요소의 글자 크기만큼 padding을 줄 것이다. */
+  padding: 1em;
+  text-align: center;
+  text-decoration: none;
+}
+
+.menu-link:hover {
+  color: #fff;
+}
