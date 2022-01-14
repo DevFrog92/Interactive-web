@@ -1,0 +1,110 @@
+.header {
+  align-items: center;
+  display: flex;
+  height: 80px;
+
+  /* justify-content: space-between; */
+  padding: 0 1rem;
+}
+
+.search-form {
+  margin-left: auto;
+  margin-right: 3rem;
+  max-width: 60%;
+  width: 300px;
+}
+.primary {
+  padding: 1rem;
+}
+.secondary {
+  padding: 1rem;
+}
+.secondary-a {
+  background-color: #fff;
+}
+.secondary-b {
+  background-color: #666;
+}
+.footer {
+  padding: 1rem;
+  text-align: center;
+}
+.modal {
+  display: none;
+  top: 80px;
+}
+#modal-switch:checked ~ .modal {
+  display: flex;
+}
+label[for="modal-switch"] {
+  align-items: center;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  position: absolute;
+  right: 1rem;
+  top: 1.3rem;
+  width: 40px;
+}
+label[for="modal-switch"]::before {
+  content: "⚑";
+  font-size: 2rem;
+}
+#modal-switch,
+label[for="modal-switch"] span {
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+#modal-switch:checked ~ label[for="modal-switch"]::before {
+  color: dodgerblue;
+}
+
+/* ~ 형재 선택자 앞에 선택자의 다음에 나오는 형제를 선택한다. */
+
+/* + 는 선택자 바로 다음에 나오는 형재 하나만 선택한다. */
+
+@media (min-width: 1024px) {
+  .page {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .header {
+    width: 100%;
+  }
+  .menu {
+    width: 100%;
+  }
+  .secondary {
+    width: 20%;
+  }
+  .secondary-a {
+    order: 1;
+  }
+  .primary {
+    order: 2;
+    width: 60%;
+  }
+  .secondary-b {
+    order: 3;
+  }
+  .footer {
+    background-color: #333;
+    order: 4;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .primary {
+    width: calc(100% - 600px);
+
+    /* flex: 1 1 auto; */
+  }
+  .secondary {
+    width: 300px;
+  }
+}
