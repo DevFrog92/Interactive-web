@@ -69,42 +69,39 @@ label[for="modal-switch"] span {
 
 @media (min-width: 1024px) {
   .page {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "menu menu menu"
+      "secondary-a primary secondary-b"
+      "footer footer footer";
+    grid-template-columns: 20% auto 20%;
   }
   .header {
-    width: 100%;
+    grid-area: header;
   }
   .menu {
-    width: 100%;
-  }
-  .secondary {
-    width: 20%;
+    grid-area: menu;
   }
   .secondary-a {
-    order: 1;
+    grid-area: secondary-a;
   }
   .primary {
-    order: 2;
-    width: 60%;
+    grid-area: primary;
   }
   .secondary-b {
-    order: 3;
+    grid-area: secondary-b;
   }
   .footer {
     background-color: #333;
-    order: 4;
-    width: 100%;
+    grid-area: footer;
+
+    /* width: 100%; */
   }
 }
 
 @media (min-width: 1440px) {
   .primary {
-    width: calc(100% - 600px);
-
-    /* flex: 1 1 auto; */
-  }
-  .secondary {
-    width: 300px;
+    grid-template-columns: 300px auto 300px;
   }
 }
