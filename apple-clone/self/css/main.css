@@ -23,11 +23,19 @@ a {
 
 .global-nav {
   height: 44px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .local-nav {
   border-bottom: 1px solid #ddd;
   height: 52px;
+  left: 0;
+  position: absolute;
+  top: 45px;
+  width: 100%;
 }
 
 .global-nav,
@@ -63,6 +71,7 @@ a {
 }
 
 .scroll-section {
+  border: 1px solid red;
   padding-top: 50vh;
 }
 
