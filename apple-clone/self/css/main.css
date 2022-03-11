@@ -151,6 +151,22 @@ a {
   justify-content: center;
 }
 
+.sticky-elem {
+  display: none;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* scroll section에 따라서 문구를 보여줄 수 있도록 처리 */
+#show-scene-0 #scroll-section-0 .sticky-elem,
+#show-scene-1 #scroll-section-1 .sticky-elem,
+#show-scene-2 #scroll-section-2 .sticky-elem,
+#show-scene-3 #scroll-section-3 .sticky-elem {
+  display: block;
+}
+
 @media (min-width: 1024px) {
   #scroll-section-0 h1 {
     font-size: 9vw;
