@@ -47,6 +47,7 @@
   ];
 
   function setLayout() {
+
     //각 스크롤 섹션의 높이를 셋팅
 
     for(let i = 0; i < sceneInfo.length; i++) {
@@ -54,6 +55,19 @@
       sceneInfo[i].objs.container.style.height = `${sceneInfo[i].scrollHeight}px`;
     }
 
+
+    // load or refresh 되었을 때, 사용자가 바라보고 있는 화면을 잡아내기 위해서
+    let totalScrollHeight = 0
+    for(let i = 0; i< sceneInfo.length; i++) {
+      totalScrollHeight += sceneInfo[i].scrollHeight;
+      // window.scrollY 를 사용해야 정상동작한다.
+      if(totalScrollHeight >= window.scrollY) {
+        currentScene = i;
+        break;
+      }
+    }
+
+    document.body.setAttribute('id', `show-scene-${currentScene}`)
   }
 
   function scrollLoop() {
@@ -65,23 +79,26 @@
 
     if(yOffset > prevScrollHeight + sceneInfo[currentScene].scrollHeight) {
       currentScene += 1;
+      document.body.setAttribute('id', `show-scene-${currentScene}`)
     }
 
     if(yOffset < prevScrollHeight) {
       if(currentScene === 0) return // 브라우저 바운스 효과 방어
 
       currentScene -= 1;
+      document.body.setAttribute('id', `show-scene-${currentScene}`)
     }
 
-    console.log(currentScene)
   }
 
+  yOffset = window.scrollY
 
+  window.addEventListener("load", () => {
+    setLayout()
+  })
   window.addEventListener("resize", setLayout);
   window.addEventListener('scroll', () => {
     yOffset = window.scrollY
     scrollLoop();
   });
-
-  setLayout();
 })();
