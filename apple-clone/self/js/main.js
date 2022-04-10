@@ -98,7 +98,7 @@
     }
   }
 
-
+  // 현재 스크롤이 어떠한 색션에 걸쳐있는지 계산
   function scrollLoop() {
     // 현재 사용자의 스크롤이 어떤 scene에 위차하는지에 대한 정보를 수집
     prevScrollHeight = 0;
