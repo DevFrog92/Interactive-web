@@ -124,6 +124,7 @@ a {
 
 .desc-message {
   font-weight: bold;
+  opacity: 0;
   width: 50%;
 }
 
@@ -131,6 +132,16 @@ a {
   background-color: rgb(29 29 31);
   height: 100px;
   width: 1px;
+}
+
+#scroll-section-2 .b {
+  left: 40%;
+  top: 10%;
+}
+
+#scroll-section-2 .c {
+  left: 45%;
+  top: 15%;
 }
 
 .mid-message {
@@ -196,6 +207,15 @@ a {
 
   #scroll-section-2 .main-message {
     font-size: 6vw;
+  }
+
+  #scroll-section-2 .b {
+    left: 53%;
+    top: 20%;
+  }
+
+  #scroll-section-2 .c {
+    left: 55%;
   }
 
   .main-message small {
