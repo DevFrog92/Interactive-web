@@ -27,6 +27,7 @@ a {
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 10;
 }
 
 .local-nav {
@@ -36,6 +37,7 @@ a {
   position: absolute;
   top: 45px;
   width: 100%;
+  z-index: 11;
 }
 
 .global-nav,
@@ -71,13 +73,15 @@ a {
 }
 
 .scroll-section {
-  border: 1px solid red;
   padding-top: 50vh;
 }
 
 #scroll-section-0 h1 {
   font-size: 4rem;
+  position: relative;
   text-align: center;
+  top: -10vh;
+  z-index: 5;
 }
 
 .main-message {
@@ -125,7 +129,7 @@ a {
 .desc-message {
   font-weight: bold;
   opacity: 0;
-  width: 50%;
+  width: 45%;
 }
 
 .pin {
@@ -178,6 +182,17 @@ a {
   left: 0;
   position: fixed;
   width: 100%;
+}
+
+.sticky-elem-canvas {
+  height: 100%;
+  top: 0;
+}
+
+.sticky-elem-canvas canvas {
+  left: 50%;
+  position: absolute;
+  top: 50%;
 }
 
 /* scroll section에 따라서 문구를 보여줄 수 있도록 처리 */
