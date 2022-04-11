@@ -14,7 +14,14 @@
       scrollHeight: 0, // 사용자가 어떠한 디바이스로 열지 모르겠읜, 스크린 높이의 배수로 해주기 위함
       heightNum: 5, // 브라우저 높이의 5배로 scrollHeight 세팅,
       objs: {
-        container: document.querySelector('#scroll-section-0')
+        container: document.querySelector('#scroll-section-0'),
+        messageA: document.querySelector("#scroll-section-0 .main-message.a"),
+        messageB: document.querySelector("#scroll-section-0 .main-message.b"),
+        messageC: document.querySelector("#scroll-section-0 .main-message.c"),
+        messageD: document.querySelector("#scroll-section-0 .main-message.d"),
+      },
+      values: {
+        messageA_opacity: [0, 1]
       }
     },
     {
@@ -70,6 +77,44 @@
     document.body.setAttribute('id', `show-scene-${currentScene}`)
   }
 
+  function calcValues(values, currentYOffset) {
+    // 각 섹션마다 얼마나 스크롤이 되었는지가 중요하다
+    let rv;
+    // 현재 스크롤 섹션에서 스크롤된 비율 구하기
+    let scrollRatio = currentYOffset / sceneInfo[currentScene].scrollHeight
+    // 얼만큼 스크롤 되었는지 비율이 있어야 한다.
+    rv = scrollRatio * (values[1] - values[0]) + values[0]
+
+    return rv;
+
+  }
+
+  function playAnimation() {
+    const objs = sceneInfo[currentScene].objs;
+    const values = sceneInfo[currentScene].values;
+    const currentYOffset = yOffset - prevScrollHeight;
+
+
+    switch (currentScene) {
+      case 0:
+
+        let messageA_opacity_in = calcValues(values.messageA_opacity, currentYOffset)
+        objs.messageA.style.opacity = messageA_opacity_in
+        // css setting
+        break;
+
+      case 1:
+        // console.log('1 play')
+        break;
+      case 2:
+        // console.log('2 play')
+        break;
+      case 3:
+        // console.log('3 play')
+        break;
+    }
+  }
+
   function scrollLoop() {
     prevScrollHeight = 0;
 
@@ -89,6 +134,7 @@
       document.body.setAttribute('id', `show-scene-${currentScene}`)
     }
 
+    playAnimation();
   }
 
   yOffset = window.scrollY
