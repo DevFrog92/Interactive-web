@@ -88,6 +88,7 @@ a {
   justify-content: center;
   margin: 5px 0;
   opacity: 0;
+  top: 35vh;
 }
 
 .main-message p {
@@ -165,7 +166,6 @@ a {
   display: none;
   left: 0;
   position: fixed;
-  top: 0;
   width: 100%;
 }
 
