@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      height: 500vh;
+    }
+    .box {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100px;
+      background: orange;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+
+  <script>
+    const box = document.querySelector(".box")
+    let acc = 0.1;
+    let delayedYOffset = 0;
+    let animationId = null;
+    let rafState;
+
+    window.addEventListener('scroll', () => {
+      // box.style.width = `${window.scrollY}px`
+      if(!rafState) {
+        animationId = requestAnimationFrame(loop);
+        rafState = true
+      }
+    })
+
+    function loop() {
+      // 속도를 감속시킬 때 사용한다.
+      delayedYOffset = delayedYOffset + (window.scrollY - delayedYOffset) * acc
+      box.style.width = `${delayedYOffset}px`
+
+      animationId = requestAnimationFrame(loop);
+
+      if(Math.abs(window.scrollY - delayedYOffset) < 1) {
+        cancelAnimationFrame(animationId)
+        rafState = false
+      }
+    }
+
+    loop();
+  </script>
+</body>
+</html>
