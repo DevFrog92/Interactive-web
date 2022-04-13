@@ -21,6 +21,11 @@ a {
   text-decoration: none;
 }
 
+/* loading시에는 스크롤이 되지 않도록 조정한다. */
+body.before-loading {
+  overflow: hidden;
+}
+
 .global-nav {
   height: 44px;
   left: 0;
@@ -38,6 +43,13 @@ a {
   top: 45px;
   width: 100%;
   z-index: 11;
+}
+
+.local-nav-sticky .local-nav {
+  backdrop-filter: saturate(180%) blur(15px);
+  background-color: rgb(255 255 255 / 10%);
+  position: fixed;
+  top: 0;
 }
 
 .global-nav,
@@ -74,6 +86,7 @@ a {
 
 .scroll-section {
   padding-top: 50vh;
+  position: relative;
 }
 
 #scroll-section-0 h1 {
@@ -163,7 +176,7 @@ a {
 .canvas-caption {
   color: #888;
   font-size: 1.2rem;
-  margin: 0 auto;
+  margin: -20em auto 0;
   max-width: 1000px;
   padding: 0 1rem;
 }
@@ -195,12 +208,77 @@ a {
   top: 50%;
 }
 
+#scroll-section-3 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-blend-canvas.sticky {
+  position: fixed;
+}
+
 /* scroll section에 따라서 문구를 보여줄 수 있도록 처리 */
 #show-scene-0 #scroll-section-0 .sticky-elem,
 #show-scene-1 #scroll-section-1 .sticky-elem,
 #show-scene-2 #scroll-section-2 .sticky-elem,
 #show-scene-3 #scroll-section-3 .sticky-elem {
   display: block;
+}
+
+.loading {
+  align-items: center;
+  background-color: #fff;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: 0.5s;
+  z-index: 100;
+}
+
+.before-loading .loading {
+  opacity: 1;
+}
+
+@keyframes loading-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loading-circle-ani {
+  0% {
+    stroke-dashoffset: 157;
+  }
+
+  75% {
+    stroke-dashoffset: -147;
+  }
+
+  100% {
+    stroke-dashoffset: -157;
+  }
+}
+
+.loading-circle {
+  animation: loading-spin  3s infinite;
+  height: 54px;
+  width: 54px;
+}
+
+/* document.querySelector('.loading-circle circle').getTotalLength() */
+
+.loading-circle circle {
+  animation: loading-circle-ani 1.5s infinite;
+  fill: transparent;
+  stroke: black;
+  stroke-dasharray: 157;
+  stroke-width: 4;
 }
 
 @media (min-width: 1024px) {
@@ -214,6 +292,7 @@ a {
 
   .description {
     font-size: 2rem;
+    padding: 0;
   }
 
   .description strong {
@@ -243,10 +322,14 @@ a {
 
   .mid-message {
     font-size: 4vw;
+    padding: 0;
+    width: 1000px;
   }
 
   .canvas-caption {
     font-size: 2rem;
+    margin: -8em auto 0;
+    padding: 0;
   }
 }
 
