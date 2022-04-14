@@ -26,6 +26,10 @@ body.before-loading {
   overflow: hidden;
 }
 
+.container {
+  overflow-x: hidden;
+}
+
 .global-nav {
   height: 44px;
   left: 0;
@@ -47,6 +51,8 @@ body.before-loading {
 
 .local-nav-sticky .local-nav {
   backdrop-filter: saturate(180%) blur(15px);
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-backdrop-filter: saturate(180%) blur(15px);
   background-color: rgb(255 255 255 / 10%);
   position: fixed;
   top: 0;
@@ -176,7 +182,7 @@ body.before-loading {
 .canvas-caption {
   color: #888;
   font-size: 1.2rem;
-  margin: -20em auto 0;
+  margin: -24em auto 0;
   max-width: 1000px;
   padding: 0 1rem;
 }
@@ -328,7 +334,7 @@ body.before-loading {
 
   .canvas-caption {
     font-size: 2rem;
-    margin: -8em auto 0;
+    margin-top: -8rem;
     padding: 0;
   }
 }
